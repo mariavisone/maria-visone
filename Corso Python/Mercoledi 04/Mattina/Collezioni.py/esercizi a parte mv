@@ -1,0 +1,75 @@
+"""lista = [2, 3, 4, 5, 6]
+print(lista[5])
+IndexError: list index out of range """
+
+# punto = (4, 5, 6)
+# punto[3] = 7
+# print(punto)
+
+'''numero = int(input("scegli un numero"))
+if numero > 0:
+    print ("il numero è positivo")
+if numero < 0:
+    print ("il numero è negativo")
+if numero == 0:
+    print ("il numero è uguale a 0")'''
+
+
+
+'''numero = int(input("quanti anni hai?"))
+if numero >= 18:
+    print("ok, sei abbastanza grande per guidare")
+    car = input("hai la patente?")
+    if car == "si":
+        print("sei sulla buona strada per avere la tua indipendenza")
+        info2 = input("preferiresti guidare una peugeot o una citroen?")
+        if info2 == "citroen":
+            print ("bella macchina ma piccola")
+        else:
+            print ("bella macchina buon motore")
+    else:
+        print("peccato, spero la prenderai in futuro")
+else: 
+    print("non sei idoneo per questo test")'''
+
+'''
+lista_antipasti = ["taralli","salumi","formaggi"]
+print(lista_antipasti)
+risposta1 = (input("vuoi aggiungere olive?"))
+if risposta1 == "si":
+    lista_antipasti.append("olive")
+    print(lista_antipasti)
+elif risposta1 == "non sono sicuro":
+    risposta2 = (input("vuoi aggiungere dopo i salumi il salmone?"))
+    if risposta2 == "si":
+        lista_antipasti.insert(2, "salmone")
+        print(lista_antipasti)
+elif risposta1 == "forse":
+    risposta3 = input("vuoi togliere i taralli?")
+    if risposta3 == "si":
+        lista_antipasti.remove("taralli")
+        print(lista_antipasti)
+else:
+    print("ok il menù rimane invariato") '''
+
+
+numeri = [1, 2, 3, 4, 5]
+
+for numero in numeri:
+    print(numero)
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+    
+
+    

@@ -1,0 +1,36 @@
+""" nome = input("come ti chiami?")
+età  = ( input("quanti anni hai?"))
+print("Ciao " + nome + " tu hai " + età)
+
+
+età = int( input("quanti anni hai?"))
+print(età)
+ """
+"""
+# sto provando i calcoli concatenati
+x = 1 
+y = 0.25
+z = x - y
+print (z)
+
+# sto stampando l'indice della stringa e un altro valore 
+s = "Tazza"
+print(s[2])
+print(s[4])
+"""
+
+
+
+""" saluto = "Ciao"
+nome = "Maria"
+messaggio = saluto +' ' +nome
+print(messaggio) """
+
+x = 1
+y = 2
+z = "Alice"
+lista = [x,y,z]
+print (lista)
+
+dizionario = {"tipididato":lista}
+print (dizionario)

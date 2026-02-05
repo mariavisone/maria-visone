@@ -1,0 +1,11 @@
+""" # prova a sbagliare dando un indice inesistente e copia l'errore nel file testo nella folder eccezioni conosciute
+lista = [a , b, c]
+print(lista[5]) """
+IndexError: list index out of range
+
+
+""" # crea una tupla e vedi se si può aggiundere una position
+punto = (3, 4)
+punto[2] = 5
+print(punto) """
+TypeError: 'tuple' object does not support item assignment
