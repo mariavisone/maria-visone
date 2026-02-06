@@ -1,0 +1,58 @@
+test
+una collezione è un'insieme di variabili salvate in un unico punto in memoria. 
+esistono 3 tipi di collezioni: lista, tupla, insieme
+la lista è una strutta di dati, ed è ordinata, modificabile e mista/eterogenea
+ogni elemento della lista ha un indice di posizione e grazie a questo possiamo modificare ogni elemento della lista tramite moduli per sostituire, rimuovere o inserire elementi. il tipo è list con []
+tupla è una struttura di dati non modificabile (ma modificabile solo quando la si crea), è ordinata e può essere mista. il tipo è tuple ()
+insieme è una struttura di dati non ordinato, può essere misto, e modificabile. set con {}
+
+#5
+python è un linguaggio di programmazione poiche contiene comandi di controllo e struttura,
+è interpretato: cioè noi scriviamo il codice e la macchina lo esegue, se è correttamente scritto in moodo comprensibile per  la macchina
+è ad alto livello: è piu vicino al linguaggio umano che al linguaggio della macchina
+è fortemente dinamico o dinamicamente tipizzato, poichè ogni variabile ha un tipo, possiamo cambiare i tipi alle variabili ma non ci può essere una variabile senza tipo
+orientato agli oggetti: se rispetta le tre regole dell'OOP: incapsulamento per la protezione dati, polimorfismo per la flessibilità, ereditarietà per il riulitizzo del codice
+python è unico perchè utilizza indentazione ovvero lo spazio prima della riga di codice,e indica i blocchi di codice
+si serve di un IDE ovvero di un ambiente di esecuzione (es. Visual code) che ci permette di scrivere, controllare il codice ed eseguirlo, ma soprattutto lo isola dal sistema operativo in modo tale che se il codice contiene errori, questi non vanno ad interferire con il computer
+ide isola andando a scaricare ulteriormente l'estensione python un0altra volta.
+pyhton è un linguaggio OOP : ovvero un linguaggio di programmazione orientato agli oggetti
+
+#7
+una variabile è un contenitore per un valore
+è definita da 3 parti: nome, valore, e tipo
+le variabili possono essere basilari (tipi già esistenti nella macchina)e non basilari(oggetti che creiamo noi)
+esempio di basilari str, int, len, bool
+es. di non basilari lista, tuple, insieme
+le variabili di distinguono ulteriormente in numeri interi (int) e numeri con virgola (float)
+
+#9
+una funzione è un'azione chiesta alla macchina, è un blocco di codice che racchiude un'operazione che può essere richiamata, riutilizzata e ha modularità.
+la funziona può dimostrare implicitamente un comando che vogliamo eseguire, andandolo prima a definire. esistono funzioni con valore di ritorno e senza ritorno
+i paramenti sono le variabili scritte nella definizione della funizone ovvero tra le (), e gli argomenti sono i valori reali che aggiungo quando chiamo la funzione.
+
+#11
+SQL è un linguaggio di interrogazione, serve per fare domande al database e ottenere risposte
+
+#13
+l'operatore è un simbolo che serve per eseguire un'operazione con più valori
+l'operatore aritmentico si utilizza per calcoli matematici. esempio: *, +, - , /
+l'operatore logico invece confronta due condizioni, e sono and, or, not
+and restituisce True se entrambe le condizioni sono vere 
+or restituisce True se una delle due condizioni è vera
+not restituisce True se la condizione è falsa
+
+#15
+il controllo di flusso serve a controllare le righe che vengono lette
+ci sono 3 tipi ci controllo di flusso: condizioni, cicli, funzioni
+condizione: decide se un blocco di codice viene eseguito 
+cicli: decide quante volte viene ripetuto un blocco
+
+nelle condizioni: 
+la principale condizione è if e viene utilizzata per eseguire un blocco di codice se la codizione è vera
+quando usiamo if possiamo utilizzare anche elif che ci permette di agigungere una diversa condizione e poi dobbiamo aggiungere un else finale che va il contrasto con la condizione iniziale.
+in python c'è anche match che confronta un valore con i casi possibili.
+nei cicli:
+for permette di ripetere un blocco di codice più volte (lo utilizziamo in due casi, quando sappiamo quante volte ripetere il ciclo e quando vogliamo prendere un elemento dalla sequenza, quindi può essere sequenziale e numerico)
+while ci permette di ripetere un blocco di ciclo infinite volte
+poi abbiamo break, pass, continue che modificano i comportamenti dei cicli e se avvengono. Break ad esmepio blocca la ripetizione di cicli, continue salta un solo ciclo, pass è un comando che inseriamo per passare oltre.
+
