@@ -20,9 +20,10 @@ sei_alta = altezza >= 170 #la mia variabile booleana con una condizione
 print(sei_alta)
 
 
-#collezioni - lista- insiemi -tuple
+
 #stampa una lista con i dati dell'utente raccolti fin ora.
-#chiedi all'utente se vuole aggiungere altro oltre alle info già date da porre nel sistema
+
+#chiedi all'utente se vuole aggiungere altro oltre alle info già date da porre nel sistema utilizzando if-elif-else
 
 lista = [nome, etàM, altezza ]
 print("i dati aggiunti al sistema sono: ", lista)
@@ -63,7 +64,8 @@ if richiesta == "si":
 else: 
     print("il tuo cv è completo")
 
-
+#chiedi all'utente se vuole sapere quanit anni gli/le mancano alla pensione e stampa 
+#crea un conteggio usando while
 #anni_lavorativi_per_pensione = 40
 pensione = input ("vuoi sapere quanti anni ti mancano alla pensione? si / no")
 info4 = int(input("anni di esperienza lavorativa: "))
@@ -76,11 +78,14 @@ if pensione == "si":
 else:
     print("Ok proseguiamo.")
 
+#chiedi all'utente di inserire i suoi certificati con ogni certificato il tipo e l'anno di conseguimento
 certificati = int(input("quanti certificati vuoi inserire nel tuo cv?"))
 for i in range(1, certificati + 1, 1):
     print (i)
     tipo = input("tipo di certificato: ")
     anno = input("anno: ")
+
+#fai un recap di dati fin ora inseriti sotto il profilo di modella. usando le funzioni
 
 info3 = input("inserisci la tua residenza: ")
 print("Ecco un recap dei dati inseriti a sistema per il tuo profilo")
