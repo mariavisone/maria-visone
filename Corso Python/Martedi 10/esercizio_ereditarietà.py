@@ -49,7 +49,27 @@ class Fabbrica:
         self.inventario = {} #dizionario di prodotti
 
     def aggiungi_prodotto(self, prodotto, quantità): #definisco una funzione che aggiunge prodotti all'inventario
-        self.quantità = quantità
-        self.inventario.append(prodotto , quantità)
-    
-    def vendi_prodotto(self):
+        if prodotto in self.inventario:  #se il prodotto esiste già, aumentiamo la quantità
+            self.inventario[prodotto.nome]["quantità"] += quantità
+        else:   #se il prodotto non esiste già, lo aggiungiamo
+            self.inventario[prodotto.nome] = {"prodotto": prodotto, "quantità: ", quantità}
+
+    #da rivedere non ho ben capito la vendita!!!
+    def vendi_prodotto(self, nome_prodotto, quantità):
+        disponibili = self.inventario[nome_prodotto]["quantità"]
+        if quantità > disponibili:
+            print("prodotto disponibile")
+
+    #vendita
+        self.inventario[nome_prodotto]["quantità"] -= quantità
+        prodotto = self.inventario[nome_prodotto["prodotto"]]
+        profitto_totale = prodotto.calcola_profitto() * quantità
+        print("Venduti", quantità, "x", nome_prodotto)
+        print("il profitto totale è" profitto_totale)
+        else:
+            if nome_prodotto not in self.inventario:
+                print("operaizone nulla, il prodotto non è disponibile.")
+#reso prodotto
+    def resi_prodotto (self, nome_prodotto, quantità):
+        self.inventario[nome_prodotto][quantità] += quantità
+        print("reso effettuato: + ", quantità, "x", nome_prodotto)
