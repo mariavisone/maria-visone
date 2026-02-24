@@ -143,7 +143,7 @@ def crea_matrice():
     print("Matrice creata: ", matrice)
     salvataggio_file("Matrice creata: ") #passo alla funzione la stringa 
     salvataggio_file(str(matrice))  #prima trasformo la matrice che è un array in str (str(matrice)) e la salvo nel file con la funzione creata prima
-                               
+    return matrice
 #funzione sottomatrice centrale
 def sotto_matrice(matrice):
     sotto_matrice = matrice[1:-1, 1:-1]
