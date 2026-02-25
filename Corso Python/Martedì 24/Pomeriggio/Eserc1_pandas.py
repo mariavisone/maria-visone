@@ -39,12 +39,25 @@ citta = ['Udine', 'Napoli', 'Roma', 'Parma', 'Torino', 'Milano', 'Latina', 'Fond
 data = {
     'Nome': np.random.choice(nomi, 20), #mi da 20 nomi casuali tra quelli nella lista nomi
     'Eta': np.random.randint(18, 75, 20),
-    'Citta' : np.ranodm.choice(citta, 20)
+    'Citta' : np.random.choice(citta, 20),
+    'Salario' : np.random.randint(1000, 3000, 20)
 }
 #lo trasmormo in dataframe
 df = pd.DataFrame(data)
 print("DataFrame originale: ")
 print(df)
+
+#Inseriamo volutamente alcuni valori mancanti (NaN) per l'esercizio
+df.loc[np.random.choice(df.index, size=3, replace=False), "Eta"] = np.nan
+df.loc[np.random.choice(df.index, size=3, replace=False), "Salario"] = np.nan
+
+#inserisco i duplicati
+df = pd.concat([df,df.iloc[[0,1]]], ignore_index=True)
+
+print("=== DataFrame generato (con NaN e duplicati) ===")
+print(df)
+print("\n" + "-"*60 + "\n")
+
 
 #2. Visualizzare le prime e le ultime cinque righe del DataFrame.
 print("Ecco le prime 5 righe del DataFrame: ")
@@ -60,7 +73,7 @@ print(df.dtypes) #restituisce il tipo di dati per ogni colonna
 #mediana, deviazione standard).
 
 #mi calcolo la media dell'età
-media_eta = df['Età'].mean()
+media_eta = df['Eta'].mean()
 print("Media eta: ", media_eta)
 
 #la mediana
@@ -71,13 +84,52 @@ print("Mediana eta: ", mediana_eta)
 dev_std = df['Eta'].std()
 print("Deviazione Standard: ", dev_std)
 
-#5. Identificare e rimuovere eventuali duplicati.
-# Rimozione dei duplicati
-df = df.drop_duplicates()
-print("Duplicati rimossi:")
+# (OPZIONALE ma utile) pulizia nomi colonne df.columns = df.columns.str.strip()
+
+# 5) DUPLICATI
+duplicati = df[df.duplicated(keep=False)] # keep=False mostra tutti i duplicati (non solo le copie)
+print("Righe duplicate prima della rimozione:")
+print(duplicati)
+
+df = df.drop_duplicates() # evita inplace, più pulito
+print("\nDataFrame dopo rimozione duplicati:")
 print(df)
 
-#66. Gestire i valori mancanti sostituendoli con la mediana della rispettiva colonna.
+# 6) VALORI MANCANTI con MEDIANA (assicurati che siano numeri)
+# Converte a numerico: se trova testo/sporcizia -> NaN (così poi la mediana ha senso)
+df["Eta"] = pd.to_numeric(df["Eta"], errors="coerce")
+df["Salario"] = pd.to_numeric(df["Salario"], errors="coerce")
 
+# Calcola mediane (saltando automaticamente i NaN)
+med_eta = df["Eta"].median()
+med_sal = df["Salario"].median()
 
+# Riempie i NaN assegnando la serie risultante (niente inplace)
+df["Eta"] = df["Eta"].fillna(med_eta)
+df["Salario"] = df["Salario"].fillna(med_sal)
+
+print("\nDataFrame dopo fillna con mediana:")
+print(df)
+
+# Aggiungere una nuova colonna chiamata "Categoria Età" che classifica le
+#persone come "Giovane", "Adulto" o "Senior" basandosi sull'età (es., 0-18 anni:
+#Giovane, 19-65 anni: Adulto, oltre 65 anni: Senior).
+
+#definisco una funz che prende l'età e mi restituisce una categoria
+def categoria_eta(eta):
+    if eta <= 18:
+        return "Giovane"
+    elif eta <= 65:
+        return "Adulto"
+    else:
+        return "Senior"
+
+#8. Salvare il DataFrame pulito in un nuovo file CSV '''
+#prendo la colonna età e creo una funzione con .apply e applico la funz a ogni riga della colonna
+df["Categoria Eta"] = df["Eta"].apply(categoria_eta)
+print(df)
+
+#salvo su file csv index = False
+df.to_csv("dati_puliti.csv", index= False)
+print("DataFrame salvato correttamente in dati_puliti.csv")
 
