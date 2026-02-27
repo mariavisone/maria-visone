@@ -73,7 +73,7 @@ print("Punti medi per giocatore: ", punti_medi)
 vautazione_media = df.groupby("Giocatore")["Valutazione"].mean()
 print("la valutaizone media è: ", vautazione_media)
 
-#seleziona le partite in cui il giocatore ha fatto una doppia doppia, piu di 10pts e piu di 10 ass 
+#seleziona le partite in cui il giocatore ha fatto una doppia doppia, piu di 10pts e piu di 10 rimbalzi 
 partite_ottime = df[(df["Punti"] > 10) & (df["Rimbalzi"] > 10)]
 print(partite_ottime)
 
@@ -94,3 +94,7 @@ plt.title("Valutazione media per giocatore")
 plt.ylabel("Valutazione media")
 plt.xlabel("Giocatore")
 plt.show()
+
+
+
+
