@@ -16,32 +16,32 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 #1. GENERAZIONE DEI DATI
-np.random.seed(42)  #rendiamo fissi i numeri casuali
+np.random.seed(42)  #rendiamo fissi i numeri casuali quando rieseguiamo il codice
 
-#genero numero di visitatori giornalieri
+#genero numero di visitatori giornalieri per un anno
 visitatori = np.random.normal(2000, 500, 365)  #(media, dev std, giorni)
 
 #aggiungo trend fittizio per simnulare la crescita dei visitatori, anuuale 
 #imposto l'incremento +400
-trend = np.linspace(0,400, 365)
+trend = np.linspace(0,1000, 365)  # crea 365 numeri equidistanti, simula una crescita progressiva durante l’anno
 visitatori_con_incremento = visitatori + trend
 visitatori_con_incremento = np.round(visitatori_con_incremento).astype(int) #per trasformarlo in un numero intero
 
 #2. CREA DATAFRAME
-#genero l'indice di date annuale
+#genero l'indice di date annuale - crea una sequenza di date con data_range
 date = pd.date_range(start="2025-01-01", periods=365, freq="D")
 
-#Creo dataframe
+#Creo dataframe 
 df = pd.DataFrame({
-    "Visitatori": visitatori_con_incremento
-}, index= date)
+    "Visitatori": visitatori_con_incremento    #colonna
+}, index= date)   #uso le date come indici
 
 print(df)
 
 #3.
 #Analisi dei Dati: Calcolare il numero medio di visitatori per mese e la deviazione standard.
 #calcolo media visitatori per mese
-media = df.groupby(df.index.month).mean().round(decimals=0)
+media = df.groupby(df.index.month).mean().round(decimals=0)  #
 dev_std = df.groupby(df.index.month).std().round(decimals=0)
 print("La media di visitatori per mese: \n", media)
 print("La deviazione standard è: \n", dev_std)
