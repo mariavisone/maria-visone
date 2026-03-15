@@ -1,0 +1,269 @@
+'''teoria fino a Booleani
+print()
+input()
+int(input())
+float() '''
+'''
+#Chiedi all’utente il nome e stampalo con un messaggio di saluto.
+nome = input("inserisci il tuo nome: ")
+print("Ciao,", nome + " " + "benvenuta in python")
+
+#indici di posizione in una stringa equivalgono a valori esatti della lista.
+# if I have a list. esempio:
+x = [2,4,6,8,10]
+print(x[0])
+
+s = [8, 19 , 22]
+print(s[2])
+
+#chiedi all'utente la sua età e stampala
+età = input ("inserisci la tua età: ")
+print("Ciao, la tua età è: ", età ) #si utilizza la virgola tra i msg e la variabile
+
+#Chiedi due numeri all’utente e stampa la loro somma.
+scelta1 = int(input("inserisci il primo numero: "))
+scelta2 = int(input("inserisci il secondo numero: "))
+print( scelta1 + scelta2) 
+
+#I BOOLEANI
+#chiedi l’età all’utente e
+# crea una variabile booleana che vale: 
+# True se l’età è maggiore o uguale a 18 
+# False altrimenti
+
+età = int(input("la tua età è: "))
+maggiorenne = età >= 18    #creo una variabile boleana con una codizione
+print(maggiorenne)
+
+#Chiedi un numero e 
+# salva in una variabile booleana 
+# se il numero è maggiore di zero.
+
+num = int(input("dammi un numero: "))
+scelta = num > 0
+print(scelta) #si tratta di dare una condizione alla variabile
+
+#Chiedi due numeri e crea una variabile booleana che dice se il primo è maggiore del secondo.
+num1 = int(input("inserisci il primo numero: "))
+num2 = int(input("inserisci il secondo numero: "))
+confr = num1 > num2
+print(num1 > num2) 
+
+
+#chiedi età e se ha il biglietto (true o false)
+età = int(input("inserisci la tua età: ")) 
+ticket = input("hai il biglietto?: ( True / False) ")
+
+cond1 = età >= 18 and ticket == "True"
+print(cond1)
+
+
+richiesta = input("piove? si / no: ")
+cond = richiesta == "si"
+print(not(cond))
+
+nome = input("inserisci il tuo nome: ")
+età = int(input("inserisci la tua età: "))
+
+studente_adulto = età >= 18
+print(studente_adulto) 
+
+# if-else-elif
+età = int(input("inserisci la tua età: "))
+if età > 18:
+    print("sei maggiorenne, puoi guidare!")
+    patente = input("Hai la patente?")
+    if patente == "si" :
+        print("grandioso")
+        car = input("che macchina ti piacerre tra citroen e peugeot?")
+        if car == "citroen":
+            print("ottima scelta")
+        else:
+            print("ah peccato, la citr è più buona")
+    else:
+        print("ah peccato")
+else:
+    print("sei minorenne, non puoi proseguire") 
+
+#2 
+lista = ["yogurt", "cheese", "acqua"]
+richiesta = input("vuoi modificare la lista? si o no")
+if richiesta == "si":
+    print("ok dimmi adesso se vuoi aggiungere a fine lista=1, rimuovere=2, inserire=3 ")
+    richiesta2 = int(input("dimmi pure: 1, 2, 3?: "))
+    if richiesta2 == 1:
+        print("ok vuoi aggiungere olive? si o no")
+        risposta = input("scegli: si o no")
+        if risposta == "si":
+            lista.append("olive")
+            print(lista)
+        else:
+            print("ok")
+    elif richiesta2 == 2:
+        print("vuoi rimuovere yougrt? si o no?: ")
+        utente = input("si")
+        if utente == "si":
+            lista.remove("yogurt")
+            print(lista)
+    else:
+        print("task not completed")
+else:
+    print("task is not completed") 
+
+#3
+dato1= input("nome: ")
+dato2= input("password: ")
+dato3 = int(input("id: "))
+
+#considero una lista di id già preesistenti nel sistema 
+lista = [ 111, 222, 333 ]
+if dato3 in lista:
+    print("utente presente nel sistema")
+else:
+    lista.append(444)
+    print(lista)
+    print("nuovo utente creato") 
+
+età = int(input("la tua età: "))
+if età < 18:
+    print("mi disp non puoi vedere questo film")
+else:
+    print("puoi vedere questo filmm") 
+
+#2
+num1 = int(input("inserisci il primo num"))
+num2 = int(input("inserisci il sec num"))
+
+scelta = input ("scegli cosa vuoi eseguire tra molt(*), sottr(-), div(/), add(+): ")
+if scelta == "+":
+    somma = num1 + num2
+    print(somma)
+elif scelta == "-":
+    sottr = num1 - num2
+    print(sottr)
+elif scelta == "/" and num2 != 0:
+    div = num1 / num2
+    print(div)
+elif scelta == "/" and num2 == 0:
+        print("errore: div per zero")
+else:
+    print("operaizone non valida") 
+
+conteggio = 0
+
+while conteggio < 5:
+    print(conteggio)
+    conteggio += 1 
+
+for i in range(5): # variabile i è un range di 5 valori, quando arriva a 4 si ferma 
+    print(i) 
+
+num = int(input("un numero: "))
+if num % 2 == 0:
+    print("il num è pari")
+else:
+    print("dispari") 
+
+#2
+ripeti = "si"
+n = int(input("inserisci un numero intero positivo: "))
+
+while ripeti == "si":
+    for i in range (n, -1, -1):
+        print(i)
+    ripeti = input("vuoi ripetere? si o no: ") 
+
+#3 
+
+lista = [ 2, 3, 4, 5]
+
+for i in lista:
+    print(i*i) 
+
+#4 non riesco
+lista = []
+
+for n in lista:
+    print(n) 
+
+
+
+conteggio = 0 
+
+while conteggio < n:
+    print(conteggio)
+    conteggio += 1
+
+
+numeri = [1, 2, 3, 4, 5]
+
+for i in numeri:
+    if i == 3:
+        continue
+    print(i) 
+
+#1. range()
+richiesta = "si"
+n = input("inserisci 'numero' o 'stringa': ")
+
+while richiesta == "si":
+
+    if n == "numero":
+        print("ok")
+        num = int(input("adesso scegli un numero: "))
+        if num % 2 == 0:
+            print("il numero è pari")
+        else:
+            print("il numero è dispari")
+    elif n == "stringa":
+        print("ok hai scelto stringa")
+        info3 = input("inserisci una stringa")
+    else:
+        print("error, non puoi proseguire")
+
+    richiesta = input("vuoi ripetere il ciclo? si o no: ")
+    if richiesta == "no":
+        break
+
+#2
+ripeti = "si"
+int1 = int(input("dammi un numero che forma l'inizio dell'intervallo"))
+int2 = int(input("dammi un num per la fine"))
+
+while ripeti == "si":
+    primi = []
+    non_primi = []
+
+    for i in range (int1, int2 + 1, 1):
+        if i < 2:
+            non_primi.append(i)
+            continue
+
+    primo = True  #non lo so fare chiedi a mirko!!!
+
+    for i in range (2, i) '''
+
+#esercitazione
+#1
+
+numero = int(input("inserisci numeri interi: "))
+
+while numero != 0:
+    numero = int(input("inserisci numeri interi: "))
+    if numero == 0:
+        
+    
+
+
+
+    
+
+
+        
+    
+        
+        
+
+
+
+
