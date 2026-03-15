@@ -1,0 +1,24 @@
+{
+    "721": {
+        "nome": "volcanion",
+        "pokedex_N\u00b0": 721,
+        "type": [
+            "fire",
+            "water"
+        ]
+    },
+    "155": {
+        "nome": "cyndaquil",
+        "pokedex_N\u00b0": 155,
+        "type": [
+            "fire"
+        ]
+    },
+    "245": {
+        "nome": "suicune",
+        "pokedex_N\u00b0": 245,
+        "type": [
+            "water"
+        ]
+    }
+}
