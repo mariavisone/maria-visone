@@ -1,0 +1,38 @@
+# break, utilizzato per interrompere l'esecuzione dei cicli
+numeri = [1, 2, 3, 4, 5]
+
+for numero in numeri:
+    if numero == 3:
+        break
+    print(numero)
+
+# continue, salta un ciclo
+numeri = [1, 2, 3, 4, 5]
+
+for numero in numeri:
+    if numero == 3:
+        continue
+    print(numero)
+
+# pass, è un passa oltre
+#è come scrivere un working in progress, un pass 
+# ex.
+
+if True:
+    #qui andrà il controllo su eccc ecc
+    pass
+
+while True:
+    #qui andrà il menu dell'utente
+    pass
+
+for i in range (5):
+
+    if i == 3:
+        pass
+    print(i)
+
+
+# splat * 
+numeri = [*range(1, 11, 2)]
+print(numeri)
