@@ -51,8 +51,6 @@ class Negozio:
         pass
 
 
-
-
     def inventario_completo(self):
         print( self.inventario,  "è l'inventario di", self.nome)
         pass
