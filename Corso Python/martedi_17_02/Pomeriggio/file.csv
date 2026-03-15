@@ -1,0 +1,23 @@
+#adesso vediamo come si gestiscono i file su pyhton, csv
+'''il file csv si scrive file.csv
+se io scrivo 
+nome,cognome,indirizzo
+tommaso,muraca, via roma
+maria, visone, via atlad
+rita, torre, via atellana
+
+questo è un formato standard, sia pyhton che i programmmi come excel, numbers riconoscono questa struttura
+e trasformano questi dati in tabella 
+si usa quando utilizziamo un gestionale di magazzino
+dobbiamo gestire file esportati
+
+come leggere un csv con python
+esmepio basilare: 
+
+nome,cognome,indirizzo
+tommaso,muraca, via roma
+maria, visone, via torino
+rita, torre, via atellana
+
+
+
